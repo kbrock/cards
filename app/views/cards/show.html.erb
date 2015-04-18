@@ -1,0 +1,38 @@
+<div class="page-header">
+  <%= link_to cards_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_card_path(@card), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show card</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Page x:</dt>
+  <dd><%= @card.page_x %></dd>
+
+  <dt>Page y:</dt>
+  <dd><%= @card.page_y %></dd>
+
+  <dt>Num box x:</dt>
+  <dd><%= @card.num_box_x %></dd>
+
+  <dt>Num box y:</dt>
+  <dd><%= @card.num_box_y %></dd>
+
+  <dt>Gutter tx:</dt>
+  <dd><%= @card.gutter_tx %></dd>
+
+  <dt>Gutter ty:</dt>
+  <dd><%= @card.gutter_ty %></dd>
+
+  <dt>Gutter bx:</dt>
+  <dd><%= @card.gutter_bx %></dd>
+
+  <dt>Gutter by:</dt>
+  <dd><%= @card.gutter_by %></dd>
+
+</dl>

@@ -1,0 +1,68 @@
+<%= form_for(@card, :html => { :class => "form-horizontal", :role => "form" }) do |f| %>
+  <% if @card.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h4>
+
+      <ul>
+      <% @card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :page_x, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :page_x, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :page_y, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :page_y, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :num_box_x, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :num_box_x, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :num_box_y, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :num_box_y, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gutter_tx, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :gutter_tx, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gutter_ty, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :gutter_ty, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gutter_bx, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :gutter_bx, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :gutter_by, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :gutter_by, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
