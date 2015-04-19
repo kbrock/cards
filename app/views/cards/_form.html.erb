@@ -11,53 +11,82 @@
       </ul>
     </div>
   <% end %>
-
   <div class="form-group">
-    <%= f.label :page_x, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :page_x, :class => "form-control" %>
+    <%= f.label :name, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.text_field :name, :class => "form-control" %>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :page_y, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :page_y, :class => "form-control" %>
+    <%= f.label :page_x, "Page", :class => "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+        <%= f.text_field :page_x, :class => "form-control" %>
+        <span class="input-group-addon">&#8596;</span>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="input-group">
+        <%= f.text_field :page_y, :class => "form-control" %>
+        <span class="input-group-addon">&#8597;</span>
+      </div>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :num_box_x, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :num_box_x, :class => "form-control" %>
+    <%= f.label :num_box_x, "Number boxes", :class => "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+        <%= f.text_field :num_box_x, :class => "form-control" %>
+        <span class="input-group-addon">&#8596;</span>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="input-group">
+        <%= f.text_field :num_box_y, :class => "form-control" %>
+        <span class="input-group-addon">&#8597;</span>
+      </div>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :num_box_y, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :num_box_y, :class => "form-control" %>
+    <%= f.label :gutter_x, "Gutter", :class => "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+      <%= f.text_field :gutter_x, :class => "form-control" %>
+        <span class="input-group-addon">&#8596;</span>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="input-group">
+      <%= f.text_field :gutter_y, :class => "form-control" %>
+        <span class="input-group-addon">&#8597;</span>
+      </div>
     </div>
   </div>
   <div class="form-group">
-    <%= f.label :gutter_tx, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :gutter_tx, :class => "form-control" %>
+    <%= f.label :gutter_tx, "Gutter", :class => "col-sm-2 control-label" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+      <%= f.text_field :gutter_t, :class => "form-control" %>
+        <span class="input-group-addon">&#8593;</span>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :gutter_ty, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :gutter_ty, :class => "form-control" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+      <%= f.text_field :gutter_r, :class => "form-control" %>
+        <span class="input-group-addon">&#8594;</span>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :gutter_bx, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :gutter_bx, :class => "form-control" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+      <%= f.text_field :gutter_b, :class => "form-control" %>
+        <span class="input-group-addon">&#8595;</span>
+      </div>
     </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :gutter_by, :class => "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :gutter_by, :class => "form-control" %>
+    <div class="col-sm-2">
+      <div class="input-group">
+      <%= f.text_field :gutter_l, :class => "form-control"%>
+        <span class="input-group-addon">&#8592;</span>
+      </div>
     </div>
   </div>
   <div class="form-group">

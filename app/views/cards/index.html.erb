@@ -10,30 +10,21 @@
   <table class="table table-striped table-bordered table-hover">
     <thead>
       <tr>
-            <th>Page x</th>
-            <th>Page y</th>
-            <th>Num box x</th>
-            <th>Num box y</th>
-            <th>Gutter tx</th>
-            <th>Gutter ty</th>
-            <th>Gutter bx</th>
-            <th>Gutter by</th>
-            <th></th>
-        <th></th>
-        <th></th>
+            <th>Name</th>
+            <th>Page &#8596; &#8597;</th>
+            <th>Num box &#8596; &#8597;</th>
+            <th>Gutter &#8593; &#8594; &#8595; &#8592;</th>
+        <th colspan="3"></th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @cards) do |card| %>
-            <td><%= card.page_x %></td>
-            <td><%= card.page_y %></td>
-            <td><%= card.num_box_x %></td>
-            <td><%= card.num_box_y %></td>
-            <td><%= card.gutter_tx %></td>
-            <td><%= card.gutter_ty %></td>
-            <td><%= card.gutter_bx %></td>
-            <td><%= card.gutter_by %></td>
+            <td><%= card.name %></td>
+            <td><%= card.page_x %>x<%= card.page_y %></td>
+            <td><%= card.num_box_x %>x<%= card.num_box_y %></td>
+            <td><%= card.gutter_t %> <%= card.gutter_r %>
+                <%= card.gutter_b %> <%= card.gutter_l %></td>
             <td><%= link_to 'Show', card, :class => 'glyphicon glyphicon-info-sign' %></td>
         <td><%= link_to 'Edit', edit_card_path(card), :class => 'glyphicon glyphicon-pencil' %></td>
         <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'glyphicon glyphicon-remove' %></td>

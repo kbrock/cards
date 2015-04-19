@@ -1,3 +1,28 @@
+<style>
+@media print
+{
+  @page
+  {
+      size: auto;   /* auto is the initial value */
+      margin: 0;
+      size: US-Letter landscape;
+  }
+  .navbar-header, nav, .page-header
+  {
+      display: none !important;
+  }
+  .container, nav, body, svg {
+    margin: 0 !important; padding: 0 !important;
+  }
+}
+rect {
+  stroke: black;
+  stroke-width: 1;
+  stroke-dasharray: 2,15;
+  fill: none;
+}
+svg { width: 11in; height: 8in;}
+</style>
 <div class="page-header">
   <%= link_to cards_path, :class => 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
@@ -9,30 +34,11 @@
   <% end %>
   <h1>Show card</h1>
 </div>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.2"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<dl class="dl-horizontal">
-  <dt>Page x:</dt>
-  <dd><%= @card.page_x %></dd>
-
-  <dt>Page y:</dt>
-  <dd><%= @card.page_y %></dd>
-
-  <dt>Num box x:</dt>
-  <dd><%= @card.num_box_x %></dd>
-
-  <dt>Num box y:</dt>
-  <dd><%= @card.num_box_y %></dd>
-
-  <dt>Gutter tx:</dt>
-  <dd><%= @card.gutter_tx %></dd>
-
-  <dt>Gutter ty:</dt>
-  <dd><%= @card.gutter_ty %></dd>
-
-  <dt>Gutter bx:</dt>
-  <dd><%= @card.gutter_bx %></dd>
-
-  <dt>Gutter by:</dt>
-  <dd><%= @card.gutter_by %></dd>
-
-</dl>
+<rect x="0" y="0" width="<%=@card.width%>in" height="<%=@card.height%>in" ></rect>
+<%- @card.boxes.each do |box| -%>
+<rect x="<%=box.x%>in" y="<%=box.y%>in" width='<%=box.width%>in' height='<%=box.height%>in' ></rect>
+<%- end -%>
+</svg>
