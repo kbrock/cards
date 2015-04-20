@@ -17,6 +17,8 @@
 
 class Card < ActiveRecord::Base
 
+  validates :name, :page_x, :page_y, :num_box_x, :num_box_y, presence: true
+
   def width
     page_x * (extra_x ? 2 : 1)
   end

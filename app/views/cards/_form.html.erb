@@ -19,16 +19,24 @@
   </div>
   <div class="form-group">
     <%= f.label :page_x, "Page", :class => "col-sm-2 control-label" %>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <div class="input-group">
         <%= f.text_field :page_x, :class => "form-control" %>
         <span class="input-group-addon">&#8596;</span>
+        <span class="input-group-addon">
+          <%= f.check_box :extra_x, class: "checkbox-inline" %>
+          <%= f.label :extra_x, ".", :title => "blank on right", :class => "label-inline glyphicon glyphicon-list-alt" %>
+        </span>
       </div>
     </div>
-    <div class="col-sm-2">
+    <div class="col-sm-3">
       <div class="input-group">
         <%= f.text_field :page_y, :class => "form-control" %>
         <span class="input-group-addon">&#8597;</span>
+        <span class="input-group-addon">
+          <%= f.check_box :extra_y, class: "checkbox-inline" %>
+          <%= f.label :extra_y, ".", :title => "blank on bottom", :class => "label-inline glyphicon glyphicon-list-alt" %>
+        </span>
       </div>
     </div>
   </div>
@@ -44,6 +52,12 @@
       <div class="input-group">
         <%= f.text_field :num_box_y, :class => "form-control" %>
         <span class="input-group-addon">&#8597;</span>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="checkbox">
+        <%= f.check_box :dash %>
+        <%= f.label :dash, "Non-Solid rectangle" %>
       </div>
     </div>
   </div>

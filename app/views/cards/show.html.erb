@@ -14,12 +14,17 @@
   .container, nav, body, svg {
     margin: 0 !important; padding: 0 !important;
   }
+  rect.dash {
+    stroke-dasharray: 2,15 !important;
+  }
 }
 rect {
   stroke: black;
   stroke-width: 1;
-  stroke-dasharray: 2,15;
   fill: none;
+}
+rect.dash {
+  stroke-dasharray: 8,15;
 }
 svg { width: 11in; height: 8in;}
 </style>
@@ -37,8 +42,8 @@ svg { width: 11in; height: 8in;}
 <svg xmlns="http://www.w3.org/2000/svg" version="1.2"
      xmlns:xlink="http://www.w3.org/1999/xlink">
 
-<rect x="0" y="0" width="<%=@card.width%>in" height="<%=@card.height%>in" ></rect>
+<rect x="0" y="0" width="<%=@card.width%>in" height="<%=@card.height%>in" class="dash"></rect>
 <%- @card.boxes.each do |box| -%>
-<rect x="<%=box.x%>in" y="<%=box.y%>in" width='<%=box.width%>in' height='<%=box.height%>in' ></rect>
+<rect x="<%=box.x%>in" y="<%=box.y%>in" width='<%=box.width%>in' height='<%=box.height%>in' <%= raw(' class="dash"') if @card.dash %>></rect>
 <%- end -%>
 </svg>
